@@ -51,6 +51,7 @@ nav {
   transform: scale(1.05);
 }
 .adding-and-removing-items {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -74,3 +75,19 @@ nav {
 .remove-all:hover,.add-items:hover {
   padding-inline: 30px;
 }
+#cards-container {
+  margin-top: 40px;
+  margin-inline: 10px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+#cards-container > div {
+  background-color:rgba(50,68,89,0.2); 
+  height: 300px;  
+  border-radius: 15px;
+}
+
+
+
+
