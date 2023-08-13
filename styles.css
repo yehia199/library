@@ -1,18 +1,24 @@
 :root.light {
   --button-background-color-one:  rgba(74,77,181,1);
-  --button-background-color-alt: rgba(34,195,146,1);
+  --button-background-color-two: rgba(34,195,146,1);
+  --button-color: #EEF9FF;
   --background: #EEF9FF;
   --important-font-color: linear-gradient(138deg, rgba(74,77,181,1) 0%, rgba(34,195,146,1) 100%); 
-  --border-background-color: #11111b;
-  --border-color: #EEF9FF;
+  --theme-switcher-background-color: rgba(74,77,181,0.2);
+  --theme-switcher-color: #11111b;
+  --font-color: #11111b;
+  --input-background: #C8D5DE;
 }
 :root.dark {
   --background: #11111b;
   --important-font-color: linear-gradient(93deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  --border-background-color: #EEF9FF;
+  --theme-switcher-background-color: rgba(148,187,233,0.2);
   --button-background-color-one:  rgba(148,187,233,1);
-  --button-background-color-alt: rgba(238,174,202,1);
-  --border-color: #11111b;
+  --button-background-color-two: rgba(238,174,202,1);
+  --button-color: #11111b;
+  --theme-switcher-color: #EEF9FF;
+  --font-color: #EEF9FF;
+  --input-background: #181B27;
 }
 
 body {
@@ -40,12 +46,11 @@ nav {
 }
 .theme-switcher {
   border: none;
-  border-radius: 50px;
-  background: var(--border-background-color); 
+  border-radius: 10px;
+  background: var(--theme-switcher-background-color); 
   padding: 10px;
-  color: var(--border-color);
-  transition: transform 200ms ease-in-out;
-  font-weight: 900;
+  color: var(--theme-switcher-color);
+  transition: transform 300ms ease-in-out;
 }
 .theme-switcher:hover {
   transform: scale(1.05);
@@ -60,15 +65,15 @@ nav {
   background-color: var(--button-background-color-one);
   padding: 10px;
   border: none;
-  color: var(--border-color);
+  color: var(--button-color);
   border-radius: 20px;
   transition: padding 200ms ease-in-out;
 }
 .remove-all {
-  background-color: var(--button-background-color-alt); 
+  background-color: var(--button-background-color-two); 
   padding: 10px;
   border: none;
-  color: var(--border-color);
+  color: var(--button-color);
   border-radius: 20px;
   transition: padding 200ms ease-in-out;
 }
@@ -88,6 +93,35 @@ nav {
   border-radius: 15px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.form > input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--input-background);
+}
+#submit {
+  background-color: var(--button-background-color-two);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 300ms ease-in-out;
+}
+#submit:hover {
+  transform: scale(0.95);
+}
+dialog {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--background);
+  color: var(--font-color);
+  padding: 40px;
+}
 
 
 

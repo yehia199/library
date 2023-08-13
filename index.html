@@ -11,7 +11,7 @@
     <header>
       <nav>  
         <h1 class='main-title'>Library</h1>
-        <button class='theme-switcher'><span class="theme-name">dark</span> theme</button>
+        <button class='theme-switcher'><span class="theme-name">light</span> theme</button>
       </nav>
     </header> 
     <div class="adding-and-removing-items">
@@ -25,11 +25,20 @@
       <div></div> 
     </div>
     <div class="form-container">
-      <form class="form" action="app.js">
-        <input class="book-title" type="text" placeholder="title"> 
-        <input class="author" type="text" placeholder="author">
-        <input class="pages" type="number" placeholder="page number"> 
-      </form>
+      <dialog id="form-dialog">
+        <form class="form">
+          <label for="book-title">title</label>
+          <input id="book-title" type="text" placeholder="title"> 
+          <label for="author">author</label>
+          <input id="author" type="text" placeholder="author">
+          <label for="pages">pages read</label>
+          <input id="pages" type="number" placeholder="page number"> 
+          <label for="read">did you read it ?</label>
+          <input id="read" type="checkbox"> 
+          <button id="submit">submit</button>
+        </form>
+      </dialog>
+
     </div>
   </body>
 </html>
