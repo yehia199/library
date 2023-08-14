@@ -14,6 +14,15 @@ const addButton = document.querySelector('.add-items')
 const removeButton = document.querySelector('.remove-all')
 const booksContainer = document.querySelector('#cards-container')
 const dialoge = document.querySelector('#form-dialog')
+const titleInput = document.querySelector('#book-title') 
+const authorInput = document.querySelector('#author')
+const pagesInput = document.querySelector('#pages')
+const readInput = document.querySelector('#read') 
+const submitBtn = document.querySelector('#submit')
+
+console.log(titleInput)
+console.log(submitBtn)
+console.log(dialoge)
 let library = [];
 
 function Book(title, author, pages, isRead) {
@@ -26,6 +35,11 @@ function Book(title, author, pages, isRead) {
  addButton.addEventListener('click', ()=>{
    dialoge.showModal()
  })
- 
-addToLibrary()
-console.log(library)
+
+ submitBtn.addEventListener('click', (e) => {
+  library.push(new Book(titleInput.value, authorInput.value, pagesInput.value, readInput.checked))
+  e.preventDefault()
+  dialoge.close()
+ })
+
+ console.log(library)
