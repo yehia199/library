@@ -104,6 +104,7 @@ nav {
   border-radius: 10px;
   border: none;
   background-color: var(--input-background);
+  color: var(--font-color);
 }
 #submit {
   background-color: var(--button-background-color-two);
@@ -122,6 +123,28 @@ dialog {
   color: var(--font-color);
   padding: 40px;
 }
-
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: var(--font-color);
+}
+#read-btn.true {
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  padding-inline: 50px;
+  background-color: green;
+}
+#read-btn.false {
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  padding-inline: 50px;
+  background-color: red;
+}
 
 

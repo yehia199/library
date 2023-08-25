@@ -40,6 +40,30 @@ function Book(title, author, pages, isRead) {
   library.push(new Book(titleInput.value, authorInput.value, pagesInput.value, readInput.checked))
   e.preventDefault()
   dialoge.close()
+  let book = document.createElement('div')
+  booksContainer.append(book)
+  book.setAttribute('id', `${library.length}`)
+  book.setAttribute('class', 'book')
+  let arrayObject = library[library.length - 1]
+  let title = document.createElement('p')
+  let author = document.createElement('p')
+  let pages = document.createElement('p')
+  let read = document.createElement('button')
+  read.setAttribute('id', 'read-btn')
+  book.append(title)
+  book.append(author)
+  book.append(pages)
+  book.append(read)
+  title.textContent = arrayObject.title;
+  author.textContent = arrayObject.author;
+  pages.textContent = arrayObject.pages;
+  read.textContent = arrayObject.isRead;
+  console.log(book)
+    if (arrayObject.isRead === true) {
+     read.className = 'true';
+  } else {
+     read.className = 'false'
+   }
+   console.log(library[library.length - 1])
  })
-
  console.log(library)
