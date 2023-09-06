@@ -1,40 +1,48 @@
 :root.light {
-  --button-background-color-one:  rgba(74,77,181,1);
-  --button-background-color-two: rgba(34,195,146,1);
-  --button-color: #EEF9FF;
-  --background: #EEF9FF;
-  --important-font-color: linear-gradient(138deg, rgba(74,77,181,1) 0%, rgba(34,195,146,1) 100%); 
-  --theme-switcher-background-color: rgba(74,77,181,0.2);
+  --button-background-color-one: rgba(74, 77, 181, 1);
+  --button-background-color-two: rgba(34, 195, 146, 1);
+  --button-color: #eef9ff;
+  --background: #eef9ff;
+  --important-font-color: linear-gradient(
+    138deg,
+    rgba(74, 77, 181, 1) 0%,
+    rgba(34, 195, 146, 1) 100%
+  );
+  --theme-switcher-background-color: rgba(74, 77, 181, 0.2);
   --theme-switcher-color: #11111b;
   --font-color: #11111b;
-  --input-background: #C8D5DE;
+  --input-background: #c8d5de;
 }
 :root.dark {
   --background: #11111b;
-  --important-font-color: linear-gradient(93deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  --theme-switcher-background-color: rgba(148,187,233,0.2);
-  --button-background-color-one:  rgba(148,187,233,1);
-  --button-background-color-two: rgba(238,174,202,1);
+  --important-font-color: linear-gradient(
+    93deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  --theme-switcher-background-color: rgba(148, 187, 233, 0.2);
+  --button-background-color-one: rgba(148, 187, 233, 1);
+  --button-background-color-two: rgba(238, 174, 202, 1);
   --button-color: #11111b;
-  --theme-switcher-color: #EEF9FF;
-  --font-color: #EEF9FF;
-  --input-background: #181B27;
+  --theme-switcher-color: #eef9ff;
+  --font-color: #eef9ff;
+  --input-background: #181b27;
 }
 
 body {
   margin: 0;
   background-color: var(--background);
-  font-family: arial; 
+  font-family: arial;
 }
 .main-title {
   font-size: 2rem;
   font-weight: 800;
-  background: var(--important-font-color); 
+  background: var(--important-font-color);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   flex-shrink: 1;
   padding: 0px;
-  margin: 0px
+  margin: 0px;
 }
 
 nav {
@@ -47,7 +55,7 @@ nav {
 .theme-switcher {
   border: none;
   border-radius: 10px;
-  background: var(--theme-switcher-background-color); 
+  background: var(--theme-switcher-background-color);
   padding: 10px;
   color: var(--theme-switcher-color);
   transition: transform 300ms ease-in-out;
@@ -69,16 +77,18 @@ nav {
   border-radius: 20px;
   transition: padding 200ms ease-in-out;
 }
-.remove-all {
-  background-color: var(--button-background-color-two); 
-  padding: 10px;
+.remove {
+  background-color: #F38BA8;
+  padding: 5px;
+  padding-inline: 50px;
   border: none;
   color: var(--button-color);
   border-radius: 20px;
   transition: padding 200ms ease-in-out;
 }
-.remove-all:hover,.add-items:hover {
-  padding-inline: 30px;
+.remove:hover,
+.add-items:hover {
+  padding-inline: 80px;
 }
 #cards-container {
   margin-top: 40px;
@@ -88,8 +98,8 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 #cards-container > div {
-  background-color:rgba(50,68,89,0.2); 
-  height: 300px;  
+  background-color: rgba(50, 68, 89, 0.2);
+  height: 300px;
   border-radius: 15px;
 }
 
@@ -135,16 +145,14 @@ dialog {
 #read-btn.true {
   border: none;
   border-radius: 15px;
-  padding: 10px;
-  padding-inline: 50px;
-  background-color: green;
+  padding: 5px;
+  padding-inline: 60px;
+  background-color: var(--button-background-color-one);
 }
 #read-btn.false {
   border: none;
   border-radius: 15px;
-  padding: 10px;
-  padding-inline: 50px;
-  background-color: red;
+  padding: 5px;
+  padding-inline: 60px;
+  background-color: var(--button-background-color-two);
 }
-
-
