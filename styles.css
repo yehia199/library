@@ -147,12 +147,17 @@ dialog {
   border-radius: 15px;
   padding: 5px;
   padding-inline: 60px;
-  background-color: var(--button-background-color-one);
+  background-color: var(--button-background-color-two);
+  transition: padding 200ms ease-in-out;
 }
 #read-btn.false {
   border: none;
   border-radius: 15px;
   padding: 5px;
   padding-inline: 60px;
-  background-color: var(--button-background-color-two);
+  background-color: var(--button-background-color-one);
+  transition: padding 200ms ease-in-out;
+}
+#read-btn:hover {
+  padding-inline: 80px;
 }

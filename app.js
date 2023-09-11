@@ -36,55 +36,52 @@ addButton.addEventListener("click", () => {
   dialoge.showModal();
 });
 
-submitBtn.addEventListener("click", (e) => {
-  library.push(
-    new Book(
-      titleInput.value,
-      authorInput.value,
-      pagesInput.value,
-      readInput.checked,
-    ),
+submitBtn.addEventListener("click", addToLibrary);
+
+function addToLibrary(e) {
+  let newBook = new Book(
+    titleInput.value,
+    authorInput.value,
+    pagesInput.value,
+    readInput.checked,
   );
+  library.push(newBook);
   e.preventDefault();
   dialoge.close();
   let book = document.createElement("div");
   booksContainer.append(book);
   book.setAttribute("id", `${library.length}`);
   book.setAttribute("class", "book");
-  let arrayObject = library[library.length - 1];
   let title = document.createElement("p");
   let author = document.createElement("p");
   let pages = document.createElement("p");
   let read = document.createElement("button");
-  let remove = document.createElement('button');
-  remove.className = 'remove'
+  let remove = document.createElement("button");
+  remove.className = "remove";
   read.setAttribute("id", "read-btn");
   book.append(title);
   book.append(author);
   book.append(pages);
   book.append(read);
-  book.append(remove)
-  title.textContent = arrayObject.title;
-  author.textContent = arrayObject.author;
-  pages.textContent = arrayObject.pages;
-  read.textContent = arrayObject.isRead;
-  remove.textContent = 'remove'
+  book.append(remove);
+  title.textContent = newBook.title;
+  author.textContent = newBook.author;
+  pages.textContent = newBook.pages;
+  read.textContent = newBook.isRead;
+  remove.textContent = "remove";
   console.log(book);
   console.log(library[library.length - 1]);
-  read.className = `${arrayObject.isRead}`;
+  read.className = `${newBook.isRead}`;
   read.addEventListener("click", () => {
-    arrayObject.isRead = !arrayObject.isRead;
-    if (arrayObject.isRead === true) {
+    newBook.isRead = !newBook.isRead;
+    if (newBook.isRead === true) {
       read.className = "true";
       read.textContent = "true";
     } else {
       read.className = "false";
-      read.textContent = "false";
+      read.textContent = "false"; 
     }
   });
-  read.textContent = read.className;
-});
-Book.prototype.changeReadStatus = () => {
-  this.isRead = !this.isRead;
-};
+}
+
 console.log(library);
