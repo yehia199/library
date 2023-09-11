@@ -67,7 +67,7 @@ function addToLibrary(e) {
   title.textContent = newBook.title;
   author.textContent = newBook.author;
   pages.textContent = newBook.pages;
-  read.textContent = newBook.isRead;
+  read.textContent = newBook.isRead === true ? "read" : "false";
   remove.textContent = "remove";
   console.log(book);
   console.log(library[library.length - 1]);
@@ -76,10 +76,10 @@ function addToLibrary(e) {
     newBook.isRead = !newBook.isRead;
     if (newBook.isRead === true) {
       read.className = "true";
-      read.textContent = "true";
+      read.textContent = "read";
     } else {
       read.className = "false";
-      read.textContent = "false";
+      read.textContent = "not read";
     }
   });
   remove.addEventListener("click", removeBook);
@@ -87,8 +87,8 @@ function addToLibrary(e) {
 function removeBook(event) {
   parent = event.target.parentNode;
   library.splice(parent, 1);
-  parent.remove()
-  console.log(parent)
-  console.log(library)
+  parent.remove();
+  console.log(parent);
+  console.log(library);
 }
 console.log(library);

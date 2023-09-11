@@ -12,6 +12,8 @@
   --theme-switcher-color: #11111b;
   --font-color: #11111b;
   --input-background: #c8d5de;
+  --read-btn-color-true: #26b696;
+  --read-btn-color-false: #f38ba8;
 }
 :root.dark {
   --background: #11111b;
@@ -27,12 +29,15 @@
   --theme-switcher-color: #eef9ff;
   --font-color: #eef9ff;
   --input-background: #181b27;
+  --read-btn-color-true: #abe9b3;
+  --read-btn-color-false: #f38ba8;
 }
 
 body {
   margin: 0;
   background-color: var(--background);
   font-family: arial;
+  color: var(--font-color);
 }
 .main-title {
   font-size: 2rem;
@@ -78,7 +83,7 @@ nav {
   transition: padding 200ms ease-in-out;
 }
 .remove {
-  background-color: #F38BA8;
+  background-color: #f38ba8;
   padding: 5px;
   padding-inline: 50px;
   border: none;
@@ -135,6 +140,7 @@ dialog {
 }
 .book {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -146,16 +152,20 @@ dialog {
   border: none;
   border-radius: 15px;
   padding: 5px;
+  flex-basis: 0px;
   padding-inline: 60px;
-  background-color: var(--button-background-color-two);
+  color: var(--button-color);
+  background-color: var(--read-btn-color-true);
   transition: padding 200ms ease-in-out;
 }
 #read-btn.false {
   border: none;
   border-radius: 15px;
+  flex-basis: 0px;
   padding: 5px;
-  padding-inline: 60px;
-  background-color: var(--button-background-color-one);
+  padding-inline: 45px;
+  color: var(--button-color);
+  background-color: var(--read-btn-color-false);
   transition: padding 200ms ease-in-out;
 }
 #read-btn:hover {
