@@ -95,7 +95,7 @@ nav {
   margin-inline: 10px;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 #cards-container > div {
   background-color: rgba(50, 68, 89, 0.2);

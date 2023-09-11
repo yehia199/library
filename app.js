@@ -23,7 +23,7 @@ const submitBtn = document.querySelector("#submit");
 console.log(titleInput);
 console.log(submitBtn);
 console.log(dialoge);
-let library = [];
+var library = [];
 
 function Book(title, author, pages, isRead) {
   this.title = title;
@@ -79,9 +79,16 @@ function addToLibrary(e) {
       read.textContent = "true";
     } else {
       read.className = "false";
-      read.textContent = "false"; 
+      read.textContent = "false";
     }
   });
+  remove.addEventListener("click", removeBook);
 }
-
+function removeBook(event) {
+  parent = event.target.parentNode;
+  library.splice(parent, 1);
+  parent.remove()
+  console.log(parent)
+  console.log(library)
+}
 console.log(library);
