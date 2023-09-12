@@ -67,7 +67,7 @@ function addToLibrary(e) {
   title.textContent = newBook.title;
   author.textContent = newBook.author;
   pages.textContent = newBook.pages;
-  read.textContent = newBook.isRead === true ? "read" : "false";
+  read.textContent = newBook.isRead === true ? "read" : "not read";
   remove.textContent = "remove";
   console.log(book);
   console.log(library[library.length - 1]);
