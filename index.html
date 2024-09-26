@@ -1,35 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <h1 class="main-title">Library</h1>
-        <button class="theme-switcher">
-          <span class="theme-name">light</span> theme
-        </button>
-      </nav>
-    </header>
-    <div class="adding-and-removing-items">
-      <button class="add-items">Add book</button>
-    </div>
-    <div id="cards-container"></div>
-    <div class="form-container">
-      <dialog id="form-dialog">
-        <form class="form">
-          <input id="book-title" type="text" placeholder="title" required/>
-          <input id="author" type="text" placeholder="author" required/>
-          <input id="pages" type="number" placeholder="number of pages" required/>
-          did you read it<input id="read" type="checkbox" placeholder="did you read it" required/>
-          <button id="submit">submit</button>
-        </form>
-      </dialog>
-    </div>
-  </body>
+
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1 class="main-title">Library</h1>
+      <button class="theme-switcher">
+        <span class="theme-name">light</span> theme
+      </button>
+    </nav>
+  </header>
+  <div class="adding-and-removing-items">
+    <button class="add-items">Add book</button>
+  </div>
+  <div id="cards-container"></div>
+  <div class="form-container">
+    <dialog id="form-dialog">
+      <form class="form">
+        <input id="book-title" type="text" placeholder="title" required />
+        <input id="author" type="text" placeholder="author" required />
+        <input id="pages" type="number" placeholder="number of pages" required />
+        did you read it<input id="read" type="checkbox" placeholder="did you read it" required />
+        <button id="submit">submit</button>
+      </form>
+    </dialog>
+  </div>
+</body>
+
 </html>
