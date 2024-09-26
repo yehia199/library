@@ -3,11 +3,9 @@
   --button-background-color-two: rgba(34, 195, 146, 1);
   --button-color: #eef9ff;
   --background: #eef9ff;
-  --important-font-color: linear-gradient(
-    138deg,
-    rgba(74, 77, 181, 1) 0%,
-    rgba(34, 195, 146, 1) 100%
-  );
+  --important-font-color: linear-gradient(138deg,
+      rgba(74, 77, 181, 1) 0%,
+      rgba(34, 195, 146, 1) 100%);
   --theme-switcher-background-color: rgba(74, 77, 181, 0.2);
   --theme-switcher-color: #11111b;
   --font-color: #11111b;
@@ -15,13 +13,12 @@
   --read-btn-color-true: #26b696;
   --read-btn-color-false: #f38ba8;
 }
+
 :root.dark {
   --background: #11111b;
-  --important-font-color: linear-gradient(
-    93deg,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
+  --important-font-color: linear-gradient(93deg,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%);
   --theme-switcher-background-color: rgba(148, 187, 233, 0.2);
   --button-background-color-one: rgba(148, 187, 233, 1);
   --button-background-color-two: rgba(238, 174, 202, 1);
@@ -39,6 +36,7 @@ body {
   font-family: arial;
   color: var(--font-color);
 }
+
 .main-title {
   font-size: 2rem;
   font-weight: 800;
@@ -57,6 +55,7 @@ nav {
   margin-inline: 1em;
   height: 3rem;
 }
+
 .theme-switcher {
   border: none;
   border-radius: 10px;
@@ -65,15 +64,18 @@ nav {
   color: var(--theme-switcher-color);
   transition: transform 300ms ease-in-out;
 }
+
 .theme-switcher:hover {
   transform: scale(1.05);
 }
+
 .adding-and-removing-items {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
+
 .add-items {
   background-color: var(--button-background-color-one);
   padding: 10px;
@@ -82,6 +84,7 @@ nav {
   border-radius: 20px;
   transition: padding 200ms ease-in-out;
 }
+
 .remove {
   background-color: #f38ba8;
   padding: 5px;
@@ -91,10 +94,12 @@ nav {
   border-radius: 20px;
   transition: padding 200ms ease-in-out;
 }
+
 .remove:hover,
 .add-items:hover {
   padding-inline: 80px;
 }
+
 #cards-container {
   margin-top: 40px;
   margin-inline: 10px;
@@ -102,7 +107,8 @@ nav {
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
-#cards-container > div {
+
+#cards-container>div {
   background-color: rgba(50, 68, 89, 0.2);
   height: 300px;
   border-radius: 15px;
@@ -114,13 +120,15 @@ nav {
   justify-content: flex-start;
   gap: 10px;
 }
-.form > input {
+
+.form>input {
   padding: 10px;
   border-radius: 10px;
   border: none;
   background-color: var(--input-background);
   color: var(--font-color);
 }
+
 #submit {
   background-color: var(--button-background-color-two);
   border: none;
@@ -128,9 +136,11 @@ nav {
   padding: 10px;
   transition: transform 300ms ease-in-out;
 }
+
 #submit:hover {
   transform: scale(1.1);
 }
+
 dialog {
   border: none;
   border-radius: 10px;
@@ -138,6 +148,7 @@ dialog {
   color: var(--font-color);
   padding: 40px;
 }
+
 .book {
   display: flex;
   flex: 1;
@@ -148,6 +159,7 @@ dialog {
   font-weight: 800;
   color: var(--font-color);
 }
+
 #read-btn.true {
   border: none;
   border-radius: 15px;
@@ -158,6 +170,7 @@ dialog {
   background-color: var(--read-btn-color-true);
   transition: padding 200ms ease-in-out;
 }
+
 #read-btn.false {
   border: none;
   border-radius: 15px;
@@ -168,6 +181,7 @@ dialog {
   background-color: var(--read-btn-color-false);
   transition: padding 200ms ease-in-out;
 }
+
 #read-btn:hover {
   padding-inline: 80px;
 }
